@@ -10,10 +10,12 @@ def index(request):
     output += "<table border=2><th>Name</th><th>Price</th><th>Quantity</th>"
     for i in items:
         output += "<tr>"
+        """
         if i.image:
             output += "<img src='"+i.image+"'>"
         else:
             output += "[Img Not Avl]"
+        """
         output += "<td>"+i.name + "</td><td>" + str(i.price) + "</td><td>" + str(i.quantity) + "</td></tr>"
     output += "</table></center><html>";
     return HttpResponse(output)
