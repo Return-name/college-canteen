@@ -1,0 +1,14 @@
+<html>
+	<body>
+		<center>
+			Hello, Here is the list of all items in the canteen
+			<table border=2>
+				<tr><th>Image</th><th>Name</th><th>Price</th><th><Quantity</th></tr>
+				{% for item in items %}
+				<tr><td><img src="{{item.image.url | slice:"8:"}}" height="150" width="150"></td><td>{{item.name}}</td><td>{{item.price}}</td><td>{{item.quantity}}</td></tr>
+				{% endfor %}
+			</table>
+			<a href="/listall/category"><button>See Category Wise</button></a>
+		</center>
+	</body>
+</html>
