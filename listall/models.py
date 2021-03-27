@@ -15,7 +15,6 @@ class Item(models.Model):
     def image_tag(self):
         path = self.image.url
         loc = path[1:].find('/')+1
-        print("---------Sending image with path: "+path[loc:1])
         return mark_safe('<img src="' + path[loc:] + '" width="150" height="150" />')
     image_tag.short_description = 'Image'
 
