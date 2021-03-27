@@ -4,7 +4,7 @@ from .models import Item, Category
 
 # Register your models here.
 class ItemAdmin(admin.ModelAdmin):
-    fields = ['name','price','quantity','image','image_tag',]
+    fields = ['name','price','quantity','image','image_tag','category']
     readonly_fields = ['image_tag']
 
 admin.site.register(Item, ItemAdmin)

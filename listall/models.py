@@ -14,6 +14,7 @@ class Item(models.Model):
     image = models.ImageField(upload_to="listall/static/listall/images/")
     price = models.IntegerField()
     quantity = models.IntegerField(default=0)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
