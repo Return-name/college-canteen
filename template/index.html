@@ -1,0 +1,385 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page Title -->
+    <title>Canteen!</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/images/logo/favicon.png' %}" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate-3.7.0.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome-4.7.0.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-4.1.3.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery.datetimepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Area Starts -->
+	<header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-area">
+                        <a href="#"><img src="{% static 'assets/images/logo/logo.png' %}", height="60", width="100", alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="custom-navbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>  
+                    <div class="main-menu">
+                        <ul>
+                            <li class="active"><a href="#">home</a></li>
+                            <li><a href="listall/">In Stock</a></li>
+                            <li><a href="#">Orders</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-home.html">New Addition</a></li>
+                                    <li><a href="blog-details.html">View Requests</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a href="about.html">about</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Banner Area Starts -->
+    <section class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h6>the most interesting snacks in the Valavoor</h6>
+                    <h1>Discover the <span class="prime-color">IIITK</span><br>  
+                    <span class="style-change">Students<span class="prime-color"> Canteen</span></span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Area End -->
+
+    <!-- Welcome Area Starts -->
+    <section class="welcome-area section-padding2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-img">
+                        <img src="{% static 'assets/images/welcome-bg.png' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <div class="welcome-text mt-5 mt-md-0">
+                        <h3><span class="style-change">Welcome</span> <br>to your Canteen</h3>
+                        <p class="pt-3">Just some random text for now!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+
+    <!-- Food Area starts -->
+    <section class="food-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="section-top">
+                        <h3><span class="style-change">we have</span> <br>delicious snacks</h3>
+                        <p class="pt-3">They're fill divide i their yielding our after have him fish on there for greater man moveth, moved Won't together isn't for fly divide mids fish firmament on net.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food">
+                        <div class="food-img">
+                            <img src="{% static 'assets/images/eggroll.png' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Eggroll</h5>
+                                <span class="style-change">₹30</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5 mt-sm-0">
+                        <div class="food-img">
+                            <img src="{% static 'assets/images/nuggets.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>chicken nuggets</h5>
+                                <span class="style-change">₹50</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5 mt-md-0">
+                        <div class="food-img">
+                            <img src="{% static 'assets/images/maggi.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Masala maggi</h5>
+                                <span class="style-change">₹15</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="{% static 'assets/images/chowmein.webp' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Chow-mein</h5>
+                                <span class="style-change">₹30</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="{% static 'assets/images/vegroll.webp' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Veg Roll</h5>
+                                <span class="style-change">₹25</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-food mt-5">
+                        <div class="food-img">
+                            <img src="{% static 'assets/images/samosa.jpg' %}" class="img-fluid" alt="">
+                        </div>
+                        <div class="food-content">
+                            <div class="d-flex justify-content-between">
+                                <h5>Samosa</h5>
+                                <span class="style-change">₹10</span>
+                            </div>
+                            <p class="pt-3">Face together given moveth divided form Of Seasons that fruitful.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Food Area End -->
+
+
+    <!-- Deshes Area Starts -->
+    {% comment %} <div class="deshes-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Our <span>special</span> deshes</h3>
+                        <p><i>Beast kind form divide night above let moveth bearing darkness.</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 align-self-center">
+                    <h1>01.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Garlic</span><br> green beans</h3>
+                        <p class="pt-3">Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.</p>
+                        <span class="style-change">$12.00</span>
+                        <a href="#" class="template-btn3 mt-3">book a table <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
+                    <img src="{% static 'assets/images/deshes1.png' %}" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
+                    <img src="{% static 'assets/images/deshes2.png' %}" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2">
+                    <h1>02.</h1>
+                    <div class="deshes-text">
+                        <h3><span>Lemon</span><br> rosemary chicken</h3>
+                        <p class="pt-3">Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.</p>
+                        <span class="style-change">$12.00</span>
+                        <a href="#" class="template-btn3 mt-3">book a table <span><i class="fa fa-long-arrow-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Deshes Area End --> {% endcomment %}
+
+    <!-- Testimonial Area Starts -->
+    <section class="testimonial-area section-padding4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-top2 text-center">
+                        <h3>Students <span>review</span></h3>
+                        <p><i></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial-slider owl-carousel">
+                        <div class="single-slide d-sm-flex">
+                            <div class="customer-img mr-4 mb-4 mb-sm-0">
+                                <img src="{% static 'assets/images/customer1.png' %}" alt="">
+                            </div>
+                            <div class="customer-text">
+                                <h5>Review 1</h5>
+                                <span><i>batch XX</i></span>
+                                <p class="pt-3">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                        <div class="single-slide d-sm-flex">
+                            <div class="customer-img mr-4 mb-4 mb-sm-0">
+                                <img src="{% static 'assets/images/customer2.png' %}" alt="">
+                            </div>
+                            <div class="customer-text">
+                                <h5>Review 2</h5>
+                                <span><i>batch XX</i></span>
+                                <p class="pt-3">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                        <div class="single-slide d-sm-flex">
+                            <div class="customer-img mr-4 mb-4 mb-sm-0">
+                                <img src="{% static 'assets/images/customer1.png' %}" alt="">
+                            </div>
+                            <div class="customer-text">
+                                <h5>Review 3</h5>
+                                <span><i>batch XX</i></span>
+                                <p class="pt-3">You're had. Subdue grass Meat us winged years you'll doesn't. fruit two also won one yielding creepeth third give may never lie alternet food.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Area End -->
+
+    
+
+    
+    <!-- Footer Area Starts -->
+    <footer class="footer-area">
+        <div class="footer-widget section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget1">
+                            <a href="index.html"><img src="{% static 'assets/images/logo/logo.png' %}" , height="100",width="100",alt="" ></a>
+                            <p class="mt-3">Again some random texts!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget2 my-5 my-md-0">
+                            <h5 class="mb-4">contact us</h5>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>Canteen Supervisor,</p>
+                                    <p>Mess Building</p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-phone"></i>
+                                    912346780
+                                </div>
+                                <div class="info-text">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="into-icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                                <div class="info-text">
+                                    <p>supervisor@kottayam.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-widget single-widget3">
+                            <h5 class="mb-4">opening hours</h5>
+                            <p>Mon-Sun .............. 8 am - 9 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-6">
+                        
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="social-icons">
+                            <ul>
+                                <li class="no-margin">Follow Us</li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+
+    <!-- Javascript -->
+    <script src="{% static 'assets/js/vendor/jquery-2.2.4.min.js' %}"></script>
+	<script src="{% static 'assets/js/vendor/bootstrap-4.1.3.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/owl-carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery.datetimepicker.full.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>
