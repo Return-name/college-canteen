@@ -4,7 +4,40 @@
   <li class="breadcrumb-item"><a href="{% url 'index' %}">Items</a></li>
   <li class="breadcrumb-item active">current Request</li>
 {% endblock %}
-
+<!-- Header Area Starts -->
+	<header class="header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-area">
+                        <a href="#"><img src="{% static 'assets/images/logo/logo.png' %}", height="60", width="100", alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="custom-navbar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>  
+                    <div class="main-menu">
+                        <ul>
+                            <li class="active"><a href="#">home</a></li>
+                            <li><a href="listall/">In Stock</a></li>
+                            <li><a href="#">Orders</a>
+                                <ul class="sub-menu">
+                                    <li><a href="listall/new_additions">New Addition</a></li>
+                                    <li><a href="listall/add/request">View Requests</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a href="about.html">about</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
 {% block content %}
       <div class="mb-4">
     <a href="{% url 'request' %}" class="btn btn-primary align-right">Request</a>
