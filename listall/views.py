@@ -39,7 +39,7 @@ def Request(request):
     return render(request,'additem.html',{'items':items})
 
 def Add(request): 
-    items = Item.objects.all()
+    #items = Item.objects.all()
     if request.method=='POST':
         form = Update(request.POST)
         if form.is_valid():
