@@ -10,9 +10,18 @@ def index(request):
     return render(request, 'listall/index.html', context)
     
 def category_index(request):
+    """
     context = {
             'Categories': Category.objects.all(),
             'CategoryItems': [cat.item_set.all() for cat in Category.objects.all()],
             }
+    """
+    context = {}
+    Category_Item = {}
+
+    for c in Category.objects.all():
+        Category_Item[c.name] = [ i for i in c.item_set.all()]
+    
+    context['CategoryItem'] = Category_Item
 
     return render(request, 'listall/category_index.html', context)
