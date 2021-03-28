@@ -1,0 +1,38 @@
+{% load static %}
+
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'listall/style.css' %}">
+	</head>
+
+	<body>
+		<center>
+			Hello, Here is the list of all items in the canteen category wise
+			<table>
+				
+				{% for category in Categories %}
+					<th>{{category.name}}</th>	
+				{% endfor %}
+				
+				<tr>
+					{% for items in CategoryItems %}
+					<td>
+						{% for item in items %}
+						<img src="{{item.image.url | slice:"8:"}}" height="150" width="150"><br>
+						{{item.name}}<br>
+						Price: {{item.price}}<br>
+						Qty: {{item.quantity}}<br>
+						<br>
+						{% endfor %}
+					</td>
+					{% endfor %}
+				</tr>
+			</table>
+			<a href="/listall"><button>See in List Form</button></a>
+		</center>
+	</body>
+</html>
+
+<!--
+<tr><td><img src="{{item.image.url | slice:"8:"}}" height="150" width="150"></td><td>{{item.name}}</td><td>{{item.price}}</td><td>{{item.quantity}}</td></tr>
+-->

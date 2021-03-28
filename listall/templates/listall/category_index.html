@@ -1,32 +1,43 @@
-<html>
-	<body>
-		<center>
+{% extends 'base.html' %}
+ {% block breadcrumb %}
+  <li class="breadcrumb-item active">Items</li>
+{% endblock %}
+{% block content%}
+
+<div class="mb-4">
+    <a href="" class="btn btn-outline-success float-right">Add Item</a>
+  </div>
+
+
 			Hello, Here is the list of all items in the canteen category wise
-			<table border=2>
+			<table>
 				
 				{% for category in Categories %}
 					<th>{{category.name}}</th>	
 				{% endfor %}
 				
 				<tr>
-					{% for items in CategoryItems %}
+				{% for items in CategoryItems %}
 					<td>
 						{% for item in items %}
-						<img src="{{item.image.url | slice:"8:"}}" height="150" width="150"><br>
-						{{item.name}}<br>
-						Price: {{item.price}}<br>
-						Qty: {{item.quantity}}<br>
-						<br>
+							  <div class="card" style="width: 14rem;">
+							  <img class="card-img-top" src={{item.image.url| slice:"8:" }} alt="Card image cap" style="width: 100px;height:100px">
+							  <div class="card-body">
+							    <h5 class="card-title">{{item.name}}</h5>
+							    
+							   </div>
+							   <ul class="list-group list-group-flush">
+							     <li class="list-group-item">Quantity: {{item.quantity}}</li>
+							     <li class="list-group-item">Price: {{item.price}}</li>
+							   </ul> 
+							   </div>
 						{% endfor %}
 					</td>
 					{% endfor %}
 				</tr>
 			</table>
-			<a href="/listall"><button>See in List Form</button></a>
-		</center>
-	</body>
-</html>
+ 
 
-<!--
-<tr><td><img src="{{item.image.url | slice:"8:"}}" height="150" width="150"></td><td>{{item.name}}</td><td>{{item.price}}</td><td>{{item.quantity}}</td></tr>
--->
+ <pr> </pr>
+
+{% endblock %}
