@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse 
 from .form import Update
-from .models import Item, Category
+from .models import Item, Category, RequestItem
 # Create your views here.
 
 def index(request):
@@ -35,7 +35,7 @@ def new_addition(request):
     return render(request, 'listall/new_additions.html', context)
 
 def Request(request):
-    items = Item.objects.all()
+    items = RequestItem.objects.all()
     return render(request,'additem.html',{'items':items})
 
 def Add(request): 
