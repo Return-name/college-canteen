@@ -25,3 +25,11 @@ def category_index(request):
     context['CategoryItem'] = Category_Item
 
     return render(request, 'listall/category_index.html', context)
+
+def new_addition(request):
+    new_items = Item.objects.order_by('-id')[:3]
+    #new_items = new_items[::-1]
+    context = {
+            'items': new_items,
+            }
+    return render(request, 'listall/new_additions.html', context)

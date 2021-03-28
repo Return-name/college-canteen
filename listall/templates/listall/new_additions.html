@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+ {% block breadcrumb %}
+  <li class="breadcrumb-item active">Items</li>
+{% endblock %}
+{% block content%}
+
+<center>
+{% for item in items%}
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src={{item.image.url| slice:"8:" }} alt="Card image cap" style="width: 150px;height:150px; align-self: center;">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name}}</h5>
+    
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Quantity: {{item.quantity}}</li>
+    <li class="list-group-item">Price: {{item.price}}</li>
+  </ul> 
+</div>
+<br>
+ <pr> </pr> 
+{%endfor%}  
+</center>
+
+{% endblock %}
