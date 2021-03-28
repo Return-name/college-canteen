@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse 
+from .form import Update
 from .models import Item, Category
 # Create your views here.
 
@@ -33,3 +33,18 @@ def new_addition(request):
             'items': new_items,
             }
     return render(request, 'listall/new_additions.html', context)
+
+def Request(request):
+    items = Item.objects.all()
+    return render(request,'additem.html',{'items':items})
+
+def Add(request): 
+    items = Item.objects.all()
+    if request.method=='POST':
+        form = Update(request.POST)
+        if form.is_valid():
+            item = form.save()    
+        return redirect('Add')
+    else:
+        form = Update()
+    return render(request,'request.html',{'form':form})

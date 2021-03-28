@@ -1,0 +1,55 @@
+ {% extends 'base.html' %}
+ {% block breadcrumb %}
+  <li class="breadcrumb-item active">Items</li>
+{% endblock %}
+{% block content%}
+<!----
+   <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Items</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    {% for item in items%}
+    <tr>
+      <th scope="row">i</th>
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.quantity}}</td>
+    </tr>
+    
+    {% endfor %}
+    
+  </tbody>
+</table>
+-->
+
+<div class = "row">
+{% for item in items%}
+   
+   <div class ="column">
+   <div class="card" style="width: 18rem;">
+   <img class="card-img-top" src={{item.image.url| slice:"8:" }} alt="Card image cap">
+   <div class="card-body">
+     <h5 class="card-title">{{item.name}}</h5>
+  
+    </div>
+    
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Quantity: {{item.quantity}}</li>
+    <li class="list-group-item">Price: {{item.price}}</li>
+  </ul> 
+  </div>
+  </div>
+
+{%endfor%}  
+</div>
+<div class="mb-4">
+    <a href="{% url 'Add'  %}" class="btn btn-outline-success float-right  btn-lg">Catagory Wise</a>
+</div>
+{% endblock %}

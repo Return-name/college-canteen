@@ -5,4 +5,6 @@ urlpatterns = [
         path('', views.index, name='index'),
         path('category/', views.category_index, name='category_index'),
         path('new_additions/', views.new_addition, name='new_addition'),
+        path('add/',views.Request,name='Add'),
+        path('add/request',views.Add,name = 'request'),
         ]

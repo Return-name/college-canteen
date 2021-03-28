@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'index' %}">Items</a></li>
+  <li class="breadcrumb-item active">current Request</li>
+{% endblock %}
+
+{% block content %}
+   
+    <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Last Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{item.quantity}}</td>
+          <td>{{item.time}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
